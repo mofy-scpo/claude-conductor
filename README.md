@@ -33,25 +33,37 @@ Without Conductor, Claude Code is reactive — it writes code when you ask. **Wi
 ### The Lifecycle
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                                                                 │
-│   /conductor:setup          One-time project configuration      │
-│        │                                                        │
-│        ▼                                                        │
-│   /conductor:new-track      Define a feature or bug fix         │
-│        │                                                        │
-│        ▼                                                        │
-│   /conductor:implement      Execute tasks from the plan         │
-│        │                                                        │
-│        ▼                                                        │
-│   /conductor:review         Validate work against guidelines    │
-│        │                                                        │
-│        ▼                                                        │
-│   /conductor:status         Check progress at any time          │
-│                                                                 │
-│   /conductor:revert         Undo a track, phase, or task        │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────┐
+│                                                                          │
+│   /conductor:setup           One-time project configuration              │
+│        │                     8 interactive steps:                         │
+│        │                       1. Project detection (Greenfield/Brown.)   │
+│        │                       2. Product definition                      │
+│        │                       3. Product guidelines                      │
+│        │                       4. Tech stack                              │
+│        │                       5. Code style guides                       │
+│        │                       6. Workflow (TDD, commits, coverage)       │
+│        │                       7. Skills selection                        │
+│        │                       8. First track generation                  │
+│        ▼                                                                 │
+│   /conductor:new-track       Define a feature or bug fix                 │
+│        │                     5 steps: describe → spec → plan → skills    │
+│        │                     → create artifacts                           │
+│        ▼                                                                 │
+│   /conductor:implement       Execute tasks from the plan                 │
+│        │                     Per task: select → test (red) → implement   │
+│        │                     (green) → refactor → commit → update plan   │
+│        ▼                                                                 │
+│   /conductor:review          Validate work against guidelines            │
+│        │                     Scope → context → analyze → findings        │
+│        ▼                                                                 │
+│   /conductor:status          Check progress at any time                  │
+│                                                                          │
+│   /conductor:revert          Undo a track, phase, or task                │
+│                              4 phases: select → git reconcile            │
+│                              → confirm → execute                         │
+│                                                                          │
+└──────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### What Gets Created
