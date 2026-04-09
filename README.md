@@ -114,23 +114,25 @@ You need to copy **3 things** into your project:
 
 ### Option 1: Clone and Copy (Recommended)
 
+Open a terminal **in your project directory** and run:
+
 <details>
 <summary><b>Linux / macOS</b></summary>
 
 ```bash
-# 1. Clone this repo (outside your project)
-git clone https://github.com/mofy-scpo/claude-conductor.git
+# 1. Clone Conductor into your project (temporary)
+git clone https://github.com/mofy-scpo/claude-conductor.git _conductor_tmp
 
-# 2. Go to your project
-cd /path/to/your-project
-
-# 3. Create the commands directory
+# 2. Create the commands directory
 mkdir -p .claude/commands
 
-# 4. Copy the 3 required pieces
-cp -r /path/to/claude-conductor/.claude/commands/conductor .claude/commands/conductor
-cp /path/to/claude-conductor/CLAUDE.md ./CLAUDE.md
-cp -r /path/to/claude-conductor/templates ./templates
+# 3. Copy the 3 required pieces
+cp -r _conductor_tmp/.claude/commands/conductor .claude/commands/conductor
+cp _conductor_tmp/CLAUDE.md ./CLAUDE.md
+cp -r _conductor_tmp/templates ./templates
+
+# 4. Clean up
+rm -rf _conductor_tmp
 ```
 
 </details>
@@ -139,19 +141,19 @@ cp -r /path/to/claude-conductor/templates ./templates
 <summary><b>Windows (PowerShell)</b></summary>
 
 ```powershell
-# 1. Clone this repo (outside your project)
-git clone https://github.com/mofy-scpo/claude-conductor.git
+# 1. Clone Conductor into your project (temporary)
+git clone https://github.com/mofy-scpo/claude-conductor.git _conductor_tmp
 
-# 2. Go to your project
-cd C:\path\to\your-project
-
-# 3. Create the commands directory
+# 2. Create the commands directory
 New-Item -ItemType Directory -Force -Path .claude\commands
 
-# 4. Copy the 3 required pieces
-Copy-Item -Recurse ..\claude-conductor\.claude\commands\conductor .claude\commands\conductor
-Copy-Item ..\claude-conductor\CLAUDE.md .\CLAUDE.md
-Copy-Item -Recurse ..\claude-conductor\templates .\templates
+# 3. Copy the 3 required pieces
+Copy-Item -Recurse _conductor_tmp\.claude\commands\conductor .claude\commands\conductor
+Copy-Item _conductor_tmp\CLAUDE.md .\CLAUDE.md
+Copy-Item -Recurse _conductor_tmp\templates .\templates
+
+# 4. Clean up
+Remove-Item -Recurse -Force _conductor_tmp
 ```
 
 </details>
@@ -160,11 +162,10 @@ Copy-Item -Recurse ..\claude-conductor\templates .\templates
 
 ### Option 2: Git Submodule
 
-```bash
-cd your-project
-git submodule add https://github.com/mofy-scpo/claude-conductor.git .claude-conductor
+Run from your project directory:
 
-# Copy into place
+```bash
+git submodule add https://github.com/mofy-scpo/claude-conductor.git .claude-conductor
 mkdir -p .claude/commands
 cp -r .claude-conductor/.claude/commands/conductor .claude/commands/conductor
 cp .claude-conductor/CLAUDE.md CLAUDE.md
@@ -173,8 +174,8 @@ cp -r .claude-conductor/templates templates
 
 ### Option 3: Manual Download
 
-1. [Download the ZIP](https://github.com/mofy-scpo/claude-conductor/archive/refs/heads/main.zip) or clone this repo
-2. Copy `.claude/commands/conductor/` into your project's `.claude/commands/`
+1. [Download the ZIP](https://github.com/mofy-scpo/claude-conductor/archive/refs/heads/main.zip) and extract it
+2. From the extracted folder, copy `.claude/commands/conductor/` into your project's `.claude/commands/`
 3. Copy `CLAUDE.md` to your project root (or merge with your existing one)
 4. Copy the `templates/` directory to your project
 
