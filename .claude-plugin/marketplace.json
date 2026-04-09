@@ -1,0 +1,17 @@
+{
+  "name": "conductor-marketplace",
+  "owner": {
+    "name": "mofy-scpo"
+  },
+  "metadata": {
+    "description": "Claude Conductor — Context-Driven Development plugin for Claude Code"
+  },
+  "plugins": [
+    {
+      "name": "conductor",
+      "source": ".",
+      "description": "Context-Driven Development — specs, plans, and builds with TDD workflow",
+      "version": "1.0.0"
+    }
+  ]
+}

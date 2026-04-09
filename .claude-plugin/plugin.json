@@ -1,0 +1,12 @@
+{
+  "name": "conductor",
+  "description": "Context-Driven Development for Claude Code — specs, plans, and builds with TDD workflow",
+  "version": "1.0.0",
+  "author": {
+    "name": "mofy-scpo"
+  },
+  "homepage": "https://github.com/mofy-scpo/claude-conductor",
+  "repository": "https://github.com/mofy-scpo/claude-conductor",
+  "license": "Apache-2.0",
+  "keywords": ["conductor", "project-management", "tdd", "planning", "workflow"]
+}
