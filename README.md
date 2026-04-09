@@ -156,8 +156,8 @@ Claude will pick up the first task from the plan and follow the workflow:
 
 ```
 ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│  Write Test  │────>│  Implement  │────>│  Refactor   │
-│   (Red)      │     │  (Green)    │     │  (Optional) │
+│  Write Test │────>│  Implement  │────>│  Refactor   │
+│   (Red)     │     │  (Green)    │     │  (Optional) │
 └─────────────┘     └─────────────┘     └─────────────┘
        │                                        │
        │         TDD Cycle per Task             │
