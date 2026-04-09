@@ -3,3 +3,6 @@
 
 # Conductor artifacts (generated per-project, not part of the tool)
 /conductor/
+
+# Internal training materials
+formation/

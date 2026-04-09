@@ -36,19 +36,19 @@ Without Conductor, Claude Code is reactive — it writes code when you ask. **Wi
 ┌──────────────────────────────────────────────────────────────────────────┐
 │                                                                          │
 │   /conductor:setup           One-time project configuration              │
-│        │                     8 interactive steps:                         │
-│        │                       1. Project detection (Greenfield/Brown.)   │
-│        │                       2. Product definition                      │
-│        │                       3. Product guidelines                      │
-│        │                       4. Tech stack                              │
-│        │                       5. Code style guides                       │
-│        │                       6. Workflow (TDD, commits, coverage)       │
-│        │                       7. Skills selection                        │
-│        │                       8. First track generation                  │
+│        │                     8 interactive steps:                        │
+│        │                       1. Project detection (Greenfield/Brown.)  │
+│        │                       2. Product definition                     │
+│        │                       3. Product guidelines                     │
+│        │                       4. Tech stack                             │
+│        │                       5. Code style guides                      │
+│        │                       6. Workflow (TDD, commits, coverage)      │
+│        │                       7. Skills selection                       │
+│        │                       8. First track generation                 │
 │        ▼                                                                 │
 │   /conductor:new-track       Define a feature or bug fix                 │
 │        │                     5 steps: describe → spec → plan → skills    │
-│        │                     → create artifacts                           │
+│        │                     → create artifacts                          │
 │        ▼                                                                 │
 │   /conductor:implement       Execute tasks from the plan                 │
 │        │                     Per task: select → test (red) → implement   │
@@ -216,8 +216,8 @@ Claude will pick up the first task from the plan and follow the workflow:
 
 ```
 ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│  Write Test  │────>│  Implement  │────>│  Refactor   │
-│   (Red)      │     │  (Green)    │     │  (Optional) │
+│  Write Test │────>│  Implement  │────>│  Refactor   │
+│   (Red)     │     │  (Green)    │     │  (Optional) │
 └─────────────┘     └─────────────┘     └─────────────┘
        │                                        │
        │         TDD Cycle per Task             │
