@@ -1,0 +1,5 @@
+# Local Claude Code settings (contains user-specific permissions)
+.claude/settings.local.json
+
+# Conductor artifacts (generated per-project, not part of the tool)
+conductor/
