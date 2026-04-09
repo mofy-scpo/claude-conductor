@@ -9,7 +9,10 @@
   "plugins": [
     {
       "name": "conductor",
-      "source": ".",
+      "source": {
+        "source": "github",
+        "repo": "mofy-scpo/claude-conductor"
+      },
       "description": "Context-Driven Development — specs, plans, and builds with TDD workflow",
       "version": "1.0.0"
     }
