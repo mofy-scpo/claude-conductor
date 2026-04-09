@@ -10,8 +10,8 @@
     {
       "name": "conductor",
       "source": {
-        "source": "github",
-        "repo": "mofy-scpo/claude-conductor"
+        "source": "url",
+        "url": "https://github.com/mofy-scpo/claude-conductor.git"
       },
       "description": "Context-Driven Development — specs, plans, and builds with TDD workflow",
       "version": "1.0.0"
