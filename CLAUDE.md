@@ -4,6 +4,8 @@
 
 # Conductor Context
 
+> **⚠️ This file is NOT auto-loaded by Claude Code.** Per the Claude Code plugin model, a plugin-root `CLAUDE.md` is never injected into context when commands run in a user's project. This file is the **canonical reference** for the Universal File Resolution Protocol; `/conductor:setup` copies it verbatim into the user's project (`conductor/CONTEXT.md` and a `<!-- BEGIN/END CONDUCTOR CONTEXT -->` block in the project-root `CLAUDE.md`), where Claude Code *does* load it. Keep this text in sync with the canonical block in `commands/setup.md`.
+
 If a user mentions a "plan" or asks about the plan, and they have used the conductor commands in the current session, they are likely referring to the `conductor/tracks.md` file or one of the track plans (`conductor/tracks/<track_id>/plan.md`).
 
 ## Universal File Resolution Protocol

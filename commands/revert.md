@@ -26,7 +26,7 @@ CRITICAL: You must validate the success of every tool call. If any tool call fai
 ## 1.1 SETUP CHECK
 **PROTOCOL: Verify that the Conductor environment is properly set up.**
 
-1.  **Verify Core Context:** Using the **Universal File Resolution Protocol** (defined in CLAUDE.md), resolve and verify the existence of the **Tracks Registry**.
+1.  **Verify Core Context:** Using the **Universal File Resolution Protocol** (loaded from your project `CLAUDE.md` Conductor Context block — written by `/conductor:setup`. **If neither that block nor `conductor/CONTEXT.md` exists, Conductor is not set up: announce and HALT.** Otherwise its source of truth is `conductor/CONTEXT.md`), resolve and verify the existence of the **Tracks Registry**.
 
 2.  **Verify Track Exists:** Check if the **Tracks Registry** is not empty.
 

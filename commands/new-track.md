@@ -22,7 +22,7 @@ FILE OPERATIONS: You MUST use relative paths starting with `conductor/` for all 
 ## 1.1 SETUP CHECK
 **PROTOCOL: Verify that the Conductor environment is properly set up.**
 
-1.  **Verify Core Context:** Using the **Universal File Resolution Protocol** (defined in CLAUDE.md), resolve and verify the existence of:
+1.  **Verify Core Context:** Using the **Universal File Resolution Protocol** (loaded from your project `CLAUDE.md` Conductor Context block — written by `/conductor:setup`. **If neither that block nor `conductor/CONTEXT.md` exists, Conductor is not set up: announce and HALT.** Otherwise its source of truth is `conductor/CONTEXT.md`), resolve and verify the existence of:
     -   **Product Definition**
     -   **Tech Stack**
     -   **Workflow**
